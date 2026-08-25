@@ -20,6 +20,21 @@
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
     "VIEW_COMPILED_PATH": "/tmp/views",
-    "APP_MAINTENANCE_DRIVER": "file"
+    "APP_MAINTENANCE_DRIVER": "file",
+    "APP_NAME": "Gayatri Dewi Portfolio",
+    "APP_ENV": "production",
+    "APP_URL": "https://portofolio-gaya.vercel.app",
+    "APP_LOCALE": "id",
+    "APP_FALLBACK_LOCALE": "en",
+    "APP_FAKER_LOCALE": "id_ID",
+    "APP_TIMEZONE": "UTC",
+    "BCRYPT_ROUNDS": "12",
+    "DB_CONNECTION": "sqlite",
+    "SESSION_LIFETIME": "120",
+    "SESSION_ENCRYPT": "false",
+    "SESSION_PATH": "/",
+    "BROADCAST_CONNECTION": "log",
+    "FILESYSTEM_DISK": "local",
+    "QUEUE_CONNECTION": "sync"
   }
 }
