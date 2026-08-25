@@ -197,8 +197,8 @@
     color:var(--brass); margin-bottom:26px;
   }
   .hero h1{
-    font-size:clamp(40px,6.4vw,84px); line-height:1.02; letter-spacing:-.01em;
-    font-weight:600;
+    font-size:clamp(40px,6.4vw,84px); line-height:1.18; letter-spacing:-.01em;
+    font-weight:600; padding-bottom:.06em;
     background:var(--accent-gradient);
     background-size:130% 130%;
     -webkit-background-clip:text; background-clip:text; color:transparent;
