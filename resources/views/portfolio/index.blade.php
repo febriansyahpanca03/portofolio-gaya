@@ -138,6 +138,13 @@
     .menu-btn{ display:block; }
   }
 
+  @media (max-width:400px){
+    .nav-inner{ padding-left:16px; padding-right:16px; }
+    .mark{ font-size:16px; gap:6px; }
+    .mark small{ font-size:9px; }
+    .lang-btn{ padding:6px 11px; font-size:10px; }
+  }
+
   /* ---------- section scaffolding ---------- */
   section{ position:relative; padding:clamp(72px,10vw,128px) 0; }
   .act-label{
@@ -204,12 +211,17 @@
     font-size:clamp(17px,2.4vw,23px); color:var(--film-dim); margin-top:26px;
   }
   .hero-slot{
-    display:inline-flex; align-items:center; gap:9px; margin-top:30px;
+    display:inline-flex; align-items:center; gap:9px; margin-top:30px; max-width:100%;
     font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; color:var(--film-faint);
     border:1px dashed var(--stage-line); border-radius:999px; padding:8px 16px;
   }
-  .hero-slot svg{ width:13px; height:13px; opacity:.8; }
+  .hero-slot svg{ flex-shrink:0; width:13px; height:13px; opacity:.8; }
+  .hero-slot span{ text-align:left; }
   .hero-photo{ aspect-ratio:4/5; max-width:440px; width:100%; margin:0 auto; }
+
+  @media (max-width:420px){
+    .hero-slot{ border-radius:14px; font-size:10.5px; padding:8px 14px; }
+  }
 
   /* touch devices: no hover, so give tap feedback + a self-animating glow instead */
   @media (hover:none){
