@@ -171,6 +171,19 @@
   @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; text-align:center; } }
   .hero-inner{ text-align:left; }
   @media (max-width:900px){ .hero-inner{ text-align:center; } }
+
+  @keyframes hero-in{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:none; } }
+  .hero-eyebrow, .hero h1, .hero-sub, .hero-slot, .hero-photo{
+    animation:hero-in .8s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .hero-eyebrow{ animation-delay:2.25s; }
+  .hero-sub{ animation-delay:2.55s; }
+  .hero-slot{ animation-delay:2.7s; }
+  .hero-photo{ animation-delay:2.1s; }
+  @media (prefers-reduced-motion: reduce){
+    .hero-eyebrow, .hero h1, .hero-sub, .hero-slot, .hero-photo{ animation:none; }
+  }
+
   .hero-eyebrow{
     font-family:var(--font-mono); font-size:12px; letter-spacing:.2em; text-transform:uppercase;
     color:var(--brass); margin-bottom:26px;
@@ -181,7 +194,7 @@
     background:var(--accent-gradient);
     background-size:130% 130%;
     -webkit-background-clip:text; background-clip:text; color:transparent;
-    animation:hero-shift 9s ease-in-out infinite;
+    animation:hero-in .8s cubic-bezier(.2,.7,.2,1) 2.4s both, hero-shift 9s ease-in-out 3.3s infinite;
   }
   @keyframes hero-shift{ 0%,100%{ background-position:0% 40%; } 50%{ background-position:100% 60%; } }
   @media (prefers-reduced-motion: reduce){ .hero h1{ animation:none; } }
@@ -196,6 +209,22 @@
   }
   .hero-slot svg{ width:13px; height:13px; opacity:.8; }
   .hero-photo{ aspect-ratio:4/5; max-width:440px; width:100%; margin:0 auto; }
+
+  /* touch devices: no hover, so give tap feedback + a self-animating glow instead */
+  @media (hover:none){
+    .frame, .play-btn, .platform, .lang-btn{ transition:transform .15s ease; }
+    .frame:active, .play-btn:active, .platform:active, .lang-btn:active{ transform:scale(.96); }
+    .hero-spot{
+      opacity:1; animation:roam 7s ease-in-out infinite;
+    }
+    @keyframes roam{
+      0%,100%{ left:30%; top:35%; }
+      50%{ left:70%; top:55%; }
+    }
+  }
+  @media (hover:none) and (prefers-reduced-motion: reduce){
+    .hero-spot{ animation:none; opacity:.6; }
+  }
   @media (max-width:900px){ .hero-photo{ max-width:300px; order:-1; } }
   .hero-scroll{
     position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
