@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   /* ============================================================
@@ -37,7 +37,7 @@
 
     --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', serif;
     --font-body:    'Work Sans', -apple-system, 'Segoe UI', sans-serif;
-    --font-mono:    'Space Mono', 'SFMono-Regular', Consolas, monospace;
+    --font-mono:    'Work Sans', -apple-system, 'Segoe UI', sans-serif;
 
     --wrap: 1180px;
   }
