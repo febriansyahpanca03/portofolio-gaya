@@ -1,12 +1,19 @@
 {
   "version": 2,
   "builds": [
-    { "src": "public/index.php", "use": "vercel-php@0.7.4" },
+    { "src": "api/index.php", "use": "vercel-php@0.7.4" },
     { "src": "public/*.{ico,txt}", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/favicon.ico", "dest": "public/favicon.ico" },
     { "src": "/robots.txt", "dest": "public/robots.txt" },
-    { "src": "/(.*)", "dest": "public/index.php" }
-  ]
+    { "src": "/(.*)", "dest": "api/index.php" }
+  ],
+  "env": {
+    "APP_CONFIG_CACHE": "/tmp/config.php",
+    "APP_EVENTS_CACHE": "/tmp/events.php",
+    "APP_PACKAGES_CACHE": "/tmp/packages.php",
+    "APP_ROUTES_CACHE": "/tmp/routes.php",
+    "APP_SERVICES_CACHE": "/tmp/services.php"
+  }
 }
