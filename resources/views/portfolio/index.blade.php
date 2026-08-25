@@ -268,17 +268,46 @@
   .gallery .photo-mono{ font-size:clamp(1.5rem, 6vw, 2.5rem); }
 
   /* ================= PROFILE / ABOUT ================= */
+  .act-label .sub{ color:var(--film-faint); margin-left:6px; }
+  .section-rule{ height:1px; width:120px; background:var(--brass); opacity:.6; margin:28px 0 0; }
+
+  .frame-corners{ position:relative; padding:10px; }
+  .frame-corners .corner{ position:absolute; width:20px; height:20px; pointer-events:none; }
+  .frame-corners .corner.tl{ top:0; left:0; border-top:1px solid var(--brass); border-left:1px solid var(--brass); }
+  .frame-corners .corner.tr{ top:0; right:0; border-top:1px solid var(--brass); border-right:1px solid var(--brass); }
+  .frame-corners .corner.bl{ bottom:0; left:0; border-bottom:1px solid var(--brass); border-left:1px solid var(--brass); }
+  .frame-corners .corner.br{ bottom:0; right:0; border-bottom:1px solid var(--brass); border-right:1px solid var(--brass); }
+
   .profile{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(32px,6vw,80px); align-items:start; }
   @media (max-width:820px){ .profile{ grid-template-columns:1fr; } }
   .portrait{ aspect-ratio:3/4; }
   .bio p{ color:var(--film-dim); font-size:16.5px; max-width:58ch; }
   .bio p + p{ margin-top:16px; }
 
-  .stat-sheet{
-    margin-top:34px; border-top:1px solid var(--line); padding-top:22px;
-    display:grid; grid-template-columns:1fr 1fr; gap:18px 28px;
+  .quick-stats{ display:grid; grid-template-columns:1fr 1fr 1fr; margin-top:30px; border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+  .qstat{ padding:18px 14px; text-align:center; border-right:1px solid var(--line); }
+  .qstat:last-child{ border-right:none; }
+  .qstat-num{ font-family:var(--font-display); font-style:italic; font-size:28px; color:var(--brass); }
+  .qstat-label{ margin-top:6px; font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--film-faint); }
+  @media (max-width:480px){
+    .quick-stats{ grid-template-columns:1fr; }
+    .qstat{ border-right:none; border-bottom:1px solid var(--line); }
+    .qstat:last-child{ border-bottom:none; }
   }
-  @media (max-width:520px){ .stat-sheet{ grid-template-columns:1fr; } }
+
+  .stat-sheet{
+    margin-top:34px; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+  }
+  .stat{ padding:16px 20px; border-bottom:1px solid var(--line-soft); }
+  .stat:nth-child(odd){ border-right:1px solid var(--line-soft); padding-left:0; }
+  .stat:nth-child(even){ padding-right:0; }
+  .stat:nth-last-child(-n+2){ border-bottom:none; }
+  @media (max-width:520px){
+    .stat-sheet{ grid-template-columns:1fr; }
+    .stat{ border-right:none !important; padding-left:0 !important; padding-right:0 !important; border-bottom:1px solid var(--line-soft); }
+    .stat:last-child{ border-bottom:none; }
+  }
   .stat dt{
     font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
     color:var(--brass-soft); margin-bottom:5px;
@@ -657,24 +686,46 @@
   <!-- ================= PROFIL ================= -->
   <section id="profil">
     <div class="wrap">
-      <div class="act-label" data-id="Babak Satu" data-en="Act One">Babak Satu</div>
-      <h2 class="sec-title reveal" data-id="Profil &amp; <em>Latar Belakang</em>" data-en="Profile &amp; <em>Background</em>">Profil &amp; <em>Latar Belakang</em></h2>
+      <div class="act-label">
+        <span data-id="Babak 01" data-en="Act 01">Babak 01</span>
+        <span class="sub" data-id="— Profil" data-en="— Profile">— Profil</span>
+      </div>
+      <h2 class="sec-title reveal" data-id="Profil <em>&amp; Latar Belakang</em>" data-en="Profile <em>&amp; Background</em>">Profil <em>&amp; Latar Belakang</em></h2>
+      <div class="section-rule"></div>
 
       <div class="profile" style="margin-top:44px;">
-        <div class="frame portrait reveal photo-placeholder" style="--i:1">
-          <span class="photo-mono">GD</span>
+        <div class="frame-corners">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="frame portrait reveal photo-placeholder" style="--i:1">
+            <span class="photo-mono">GD</span>
+          </div>
         </div>
 
         <div class="reveal">
           <div class="bio">
-            <p data-id="Lulusan Ilmu Komunikasi (peminatan Broadcasting) dari Universitas Bina Sarana Informatika dengan IPK 3.75/4.00. Jam terbangnya di depan kamera dan panggung terbentuk lintas peran, mulai dari talent, master of ceremony, dan presenter berita, hingga reporter, sebelum debut layar lebarnya lewat &ldquo;Komang&rdquo; produksi Starvision Plus."
-               data-en="A Communication Science graduate (Broadcasting) from Universitas Bina Sarana Informatika with a 3.75/4.00 GPA. Her time in front of the camera and on stage spans multiple roles, from talent, master of ceremony, and news presenter to reporter, ahead of her feature-film debut in Starvision Plus&rsquo;s &ldquo;Komang.&rdquo;">
-              Lulusan Ilmu Komunikasi (peminatan Broadcasting) dari Universitas Bina Sarana Informatika dengan IPK 3.75/4.00. Jam terbangnya di depan kamera dan panggung terbentuk lintas peran, mulai dari talent, master of ceremony, dan presenter berita, hingga reporter, sebelum debut layar lebarnya lewat &ldquo;Komang&rdquo; produksi Starvision Plus.
+            <p data-id="Lulusan Ilmu Komunikasi peminatan Broadcasting dari Universitas Bina Sarana Informatika, IPK 3.75/4.00. Perjalanannya di depan kamera dimulai jauh sebelum layar lebar — sebagai presenter berita, reporter, dan master of ceremony di berbagai panggung — sebelum debutnya sebagai talent dalam &ldquo;Komang,&rdquo; produksi Starvision Plus (2025)."
+               data-en="A Communication Science graduate (Broadcasting) from Universitas Bina Sarana Informatika, 3.75/4.00 GPA. Her time in front of the camera began long before feature film — as a news presenter, reporter, and master of ceremony across various stages — ahead of her debut as talent in Starvision Plus&rsquo;s &ldquo;Komang&rdquo; (2025).">
+              Lulusan Ilmu Komunikasi peminatan Broadcasting dari Universitas Bina Sarana Informatika, IPK 3.75/4.00. Perjalanannya di depan kamera dimulai jauh sebelum layar lebar — sebagai presenter berita, reporter, dan master of ceremony di berbagai panggung — sebelum debutnya sebagai talent dalam &ldquo;Komang,&rdquo; produksi Starvision Plus (2025).
             </p>
-            <p data-id="Di luar syuting dan panggung, ia menekuni sisi digital sebagai Social Media Specialist, mengelola strategi konten, campaign, dan kolaborasi brand sejak masa magangnya di Mendadak Space hingga kini menangani proyek lepas untuk berbagai klien."
-               data-en="Beyond film and stage work, she also builds the digital side of her career as a Social Media Specialist, running content strategy, campaigns, and brand collaborations since her internship at Mendadak Space through to freelance client work today.">
-              Di luar syuting dan panggung, ia menekuni sisi digital sebagai Social Media Specialist, mengelola strategi konten, campaign, dan kolaborasi brand sejak masa magangnya di Mendadak Space hingga kini menangani proyek lepas untuk berbagai klien.
+            <p data-id="Di luar syuting dan panggung, ia membangun sisi digital sebagai Social Media Specialist: merancang strategi konten, campaign, dan kolaborasi brand sejak masa magang di Mendadak Space, hingga kini menangani proyek lepas untuk beragam klien."
+               data-en="Beyond film and stage work, she builds the digital side of her career as a Social Media Specialist: designing content strategy, campaigns, and brand collaborations since her internship at Mendadak Space, through to freelance client work today.">
+              Di luar syuting dan panggung, ia membangun sisi digital sebagai Social Media Specialist: merancang strategi konten, campaign, dan kolaborasi brand sejak masa magang di Mendadak Space, hingga kini menangani proyek lepas untuk beragam klien.
             </p>
+          </div>
+
+          <div class="quick-stats">
+            <div class="qstat">
+              <div class="qstat-num">3.75</div>
+              <div class="qstat-label" data-id="IPK Lulusan" data-en="Graduating GPA">IPK Lulusan</div>
+            </div>
+            <div class="qstat">
+              <div class="qstat-num">6+</div>
+              <div class="qstat-label" data-id="Produksi Sejak 2022" data-en="Productions Since 2022">Produksi Sejak 2022</div>
+            </div>
+            <div class="qstat">
+              <div class="qstat-num">7+</div>
+              <div class="qstat-label" data-id="Kolaborasi Brand" data-en="Brand Collaborations">Kolaborasi Brand</div>
+            </div>
           </div>
 
           <dl class="stat-sheet">
@@ -684,7 +735,7 @@
             </div>
             <div class="stat">
               <dt data-id="Bahasa" data-en="Languages">Bahasa</dt>
-              <dd data-id="Indonesia, Inggris (dasar)" data-en="Indonesian, English (basic)">Indonesia, Inggris (dasar)</dd>
+              <dd data-id="Indonesia &middot; Inggris (percakapan)" data-en="Indonesian &middot; English (conversational)">Indonesia &middot; Inggris (percakapan)</dd>
             </div>
             <div class="stat">
               <dt data-id="Pendidikan" data-en="Education">Pendidikan</dt>
