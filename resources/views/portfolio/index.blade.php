@@ -230,12 +230,12 @@
   .photo-mono{
     position:relative; z-index:1;
     font-family:var(--font-display); font-style:italic; font-weight:500;
-    font-size:22%;
+    font-size:clamp(2.25rem, 11vw, 4.5rem);
     background:var(--accent-gradient);
     -webkit-background-clip:text; background-clip:text; color:transparent;
     opacity:.85;
   }
-  .gallery .photo-mono{ font-size:34%; }
+  .gallery .photo-mono{ font-size:clamp(1.5rem, 6vw, 2.5rem); }
 
   /* ================= PROFILE / ABOUT ================= */
   .profile{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(32px,6vw,80px); align-items:start; }
