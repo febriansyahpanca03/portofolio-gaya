@@ -351,8 +351,11 @@
   .platform{
     width:40px; height:40px; border-radius:50%; border:1px solid var(--brass-soft);
     display:flex; align-items:center; justify-content:center;
-    font-family:var(--font-mono); font-size:11px; color:var(--brass); letter-spacing:.02em;
+    color:var(--brass); text-decoration:none;
+    transition:background .2s ease, border-color .2s ease, transform .2s ease;
   }
+  .platform svg{ width:18px; height:18px; }
+  .platform:hover{ background:var(--brass-glow); border-color:var(--brass); transform:translateY(-2px); }
   .metric-list{ display:flex; flex-direction:column; gap:0; }
   .metric{ display:flex; align-items:baseline; justify-content:space-between; padding:18px 0; border-bottom:1px solid var(--line-soft); }
   .metric:first-child{ border-top:1px solid var(--line-soft); }
@@ -771,10 +774,16 @@
             <span class="chip" data-id="Kolaborasi Brand" data-en="Brand Collaboration">Kolaborasi Brand</span>
           </div>
 
-          <div class="platform-row" aria-hidden="true">
-            <div class="platform">IG</div>
-            <div class="platform">TT</div>
-            <div class="platform">YT</div>
+          <div class="platform-row">
+            <a class="platform" href="https://www.instagram.com/gayswara_/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a class="platform" href="https://www.tiktok.com/@gayatriz0" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c.6 2.5 2.3 4 5 4.3V11c-1.8 0-3.4-.6-5-1.7V15a5.3 5.3 0 1 1-4.6-5.3v2.6a2.7 2.7 0 1 0 2.1 2.7V4h2.5Z"/></svg>
+            </a>
+            <div class="platform" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5v-5Z" fill="currentColor" stroke="none"/></svg>
+            </div>
           </div>
         </div>
 
@@ -857,10 +866,16 @@
         </div>
       </dl>
 
-      <div class="social-row" aria-hidden="true">
-        <div class="platform">IG</div>
-        <div class="platform">TT</div>
-        <div class="platform">YT</div>
+      <div class="social-row">
+        <a class="platform" href="https://www.instagram.com/gayswara_/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="platform" href="https://www.tiktok.com/@gayatriz0" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c.6 2.5 2.3 4 5 4.3V11c-1.8 0-3.4-.6-5-1.7V15a5.3 5.3 0 1 1-4.6-5.3v2.6a2.7 2.7 0 1 0 2.1 2.7V4h2.5Z"/></svg>
+        </a>
+        <div class="platform" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5v-5Z" fill="currentColor" stroke="none"/></svg>
+        </div>
       </div>
     </div>
   </section>
