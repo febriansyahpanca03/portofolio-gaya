@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gayatri Dewi</title>
 <meta name="description" content="Portofolio Gayatri Dewi — Master of Ceremony, Presenter &amp; Content Creator.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317100f'/%3E%3Ctext x='30' y='46' font-family='Georgia,%20%27Iowan%20Old%20Style%27,%20%27Times%20New%20Roman%27,%20serif' font-style='italic' font-weight='600' font-size='40' fill='%23dba17c' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
