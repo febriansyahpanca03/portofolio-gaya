@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll-reveal */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Floating decorative blobs */
+@keyframes float-slow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -30px) scale(1.05); }
+}
+
+@keyframes float-slower {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-25px, 20px) scale(1.08); }
+}
+
+.animate-float-slow {
+    animation: float-slow 9s ease-in-out infinite;
+}
+
+.animate-float-slower {
+    animation: float-slower 12s ease-in-out infinite;
+}
+
+/* Shimmering gradient text */
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.text-shimmer {
+    background-size: 200% auto;
+    animation: shimmer 6s linear infinite;
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* Nav link underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(to right, #fb7185, #fcd34d);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #e11d48;
+}
