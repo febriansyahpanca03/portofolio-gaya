@@ -19,6 +19,7 @@
     "LOG_EMERGENCY_PATH": "/tmp/laravel-emergency.log",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
-    "VIEW_COMPILED_PATH": "/tmp/views"
+    "VIEW_COMPILED_PATH": "/tmp/views",
+    "APP_MAINTENANCE_DRIVER": "file"
   }
 }
