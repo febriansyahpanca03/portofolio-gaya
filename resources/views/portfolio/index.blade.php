@@ -506,6 +506,24 @@
   @media (prefers-reduced-motion: reduce){ .hero-blob{ animation:none; } .hero-spot{ display:none; } }
   @media (hover:none){ .hero-spot{ display:none; } }
 
+  /* diagonal wave lines, drifting behind the hero content */
+  .hero-wave{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+  .hero-wave-layer{ position:absolute; top:0; left:0; width:100%; height:100%; }
+  .hero-wave-path{ fill:none; stroke:var(--brass); stroke-linecap:round; }
+  .hero-wave-layer.l1{ animation:hero-wave-drift 12s ease-in-out infinite; }
+  .hero-wave-layer.l2{ animation:hero-wave-drift-alt 16s ease-in-out infinite; }
+  .hero-wave-layer.l3{ animation:hero-wave-drift 22s ease-in-out infinite; }
+  @keyframes hero-wave-drift{
+    0%,100%{ transform:translate(0,0); }
+    50%{ transform:translate(-14px,10px); }
+  }
+  @keyframes hero-wave-drift-alt{
+    0%,100%{ transform:translate(0,0); }
+    50%{ transform:translate(10px,-8px); }
+  }
+  @media (max-width:640px){ .hero-wave-layer.l3{ display:none; } }
+  @media (prefers-reduced-motion: reduce){ .hero-wave{ display:none; } }
+
   /* ================= TITLE UNDERLINE WIPE ================= */
   .sec-title{ position:relative; display:inline-block; }
   .sec-title::after{
@@ -580,6 +598,38 @@
       <div class="hero-blob b2"></div>
     </div>
     <div class="hero-spot" aria-hidden="true"></div>
+    <div class="hero-wave" aria-hidden="true">
+      <svg class="hero-wave-layer l1" viewBox="0 0 1000 460" preserveAspectRatio="none">
+        <path class="hero-wave-path" stroke-width="1.5" opacity="0.65"
+          d="M980,20 C860,70 900,150 760,190 C610,232 660,300 500,330 C350,358 380,410 220,430 C140,440 90,448 20,452">
+          <animate attributeName="d" dur="8s" repeatCount="indefinite" values="
+            M980,20 C860,70 900,150 760,190 C610,232 660,300 500,330 C350,358 380,410 220,430 C140,440 90,448 20,452;
+            M980,20 C890,50 870,170 730,205 C580,242 690,280 470,345 C320,372 410,395 190,437 C125,444 85,448 20,452;
+            M980,20 C860,70 900,150 760,190 C610,232 660,300 500,330 C350,358 380,410 220,430 C140,440 90,448 20,452
+          "/>
+        </path>
+      </svg>
+      <svg class="hero-wave-layer l2" viewBox="0 0 1000 460" preserveAspectRatio="none">
+        <path class="hero-wave-path" stroke-width="1.1" opacity="0.4"
+          d="M1000,70 C880,110 930,190 780,225 C630,260 670,320 510,350 C360,378 390,420 230,438 C150,446 100,450 30,454">
+          <animate attributeName="d" dur="11s" repeatCount="indefinite" values="
+            M1000,70 C880,110 930,190 780,225 C630,260 670,320 510,350 C360,378 390,420 230,438 C150,446 100,450 30,454;
+            M1000,70 C910,90 900,215 750,240 C600,268 700,300 480,365 C330,392 420,405 200,441 C135,447 100,450 30,454;
+            M1000,70 C880,110 930,190 780,225 C630,260 670,320 510,350 C360,378 390,420 230,438 C150,446 100,450 30,454
+          "/>
+        </path>
+      </svg>
+      <svg class="hero-wave-layer l3" viewBox="0 0 1000 460" preserveAspectRatio="none">
+        <path class="hero-wave-path" stroke-width="0.9" opacity="0.25"
+          d="M960,-10 C840,40 880,120 730,160 C580,200 630,270 470,300 C320,328 350,382 190,404 C110,414 60,420 0,424">
+          <animate attributeName="d" dur="15s" repeatCount="indefinite" values="
+            M960,-10 C840,40 880,120 730,160 C580,200 630,270 470,300 C320,328 350,382 190,404 C110,414 60,420 0,424;
+            M960,-10 C870,20 850,140 700,175 C550,212 660,250 440,325 C290,352 380,375 160,411 C105,416 60,420 0,424;
+            M960,-10 C840,40 880,120 730,160 C580,200 630,270 470,300 C320,328 350,382 190,404 C110,414 60,420 0,424
+          "/>
+        </path>
+      </svg>
+    </div>
     <div class="wrap hero-grid">
       <div class="hero-inner">
         <div class="hero-eyebrow" data-id="Portofolio Talent &amp; Social Media Specialist" data-en="Talent &amp; Social Media Specialist Portfolio">Portofolio Talent &amp; Social Media Specialist</div>
