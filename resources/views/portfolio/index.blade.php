@@ -162,6 +162,21 @@
   .sec-title .amp{ font-family:Georgia,'Times New Roman',serif; font-style:italic; }
   .sec-intro{ max-width:62ch; color:var(--film-dim); font-size:16px; }
 
+  /* overall scale-down for phones: everything read as too large end-to-end */
+  @media (max-width:640px){
+    section{ padding:48px 0; }
+    .act-label{ font-size:10px; margin-bottom:10px; }
+    .sec-title{ font-size:clamp(24px,7.5vw,30px); margin-bottom:14px; }
+    .sec-intro{ font-size:14.5px; }
+    .hero{ min-height:auto; padding:96px 0 56px; }
+    .hero h1{ font-size:clamp(32px,11vw,42px); }
+    .hero-sub{ font-size:15px; margin-top:16px; }
+    .hero-eyebrow{ font-size:10.5px; margin-bottom:16px; }
+    .hero-slot{ margin-top:20px; }
+    .bio p{ font-size:15px; }
+    .frame-corners{ max-width:220px; margin:0 auto; }
+  }
+
   .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
   .reveal.in{ opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
