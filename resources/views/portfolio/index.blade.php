@@ -245,6 +245,7 @@
     .hero-spot{ animation:none; opacity:.6; }
   }
   @media (max-width:900px){ .hero-photo{ max-width:300px; order:-1; } }
+  @media (max-width:640px){ .hero-photo{ max-width:210px; } }
   .hero-scroll{
     position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
     display:flex; flex-direction:column; align-items:center; gap:8px;
