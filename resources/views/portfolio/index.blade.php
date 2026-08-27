@@ -138,11 +138,16 @@
     .menu-btn{ display:block; }
   }
 
+  @media (max-width:480px){
+    .nav-inner{ padding-left:16px; padding-right:16px; gap:10px; }
+    .mark{ font-size:17px; gap:6px; white-space:nowrap; }
+    .mark small{ font-size:9px; white-space:nowrap; }
+    .lang-btn{ padding:6px 11px; font-size:10px; flex-shrink:0; }
+    .menu-btn{ flex-shrink:0; }
+  }
   @media (max-width:400px){
-    .nav-inner{ padding-left:16px; padding-right:16px; }
-    .mark{ font-size:16px; gap:6px; }
+    .mark{ font-size:16px; }
     .mark small{ font-size:9px; }
-    .lang-btn{ padding:6px 11px; font-size:10px; }
   }
 
   /* ---------- section scaffolding ---------- */
