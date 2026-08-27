@@ -154,6 +154,7 @@
   .act-label::before{ content:''; width:22px; height:1px; background:var(--brass-soft); }
   .sec-title{ font-size:clamp(30px,4vw,46px); font-weight:600; margin-bottom:20px; }
   .sec-title em{ font-style:italic; font-weight:400; color:var(--brass); }
+  .sec-title .amp{ font-family:Georgia,'Times New Roman',serif; font-style:italic; }
   .sec-intro{ max-width:62ch; color:var(--film-dim); font-size:16px; }
 
   .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
@@ -702,7 +703,7 @@
         <span data-id="Babak 01" data-en="Act 01">Babak 01</span>
         <span class="sub" data-id="— Profil" data-en="— Profile">— Profil</span>
       </div>
-      <h2 class="sec-title reveal" data-id="Profil <em>&amp; Latar Belakang</em>" data-en="Profile <em>&amp; Background</em>">Profil <em>&amp; Latar Belakang</em></h2>
+      <h2 class="sec-title reveal" data-id="Profil <em><span class=&quot;amp&quot;>&amp;</span> Latar Belakang</em>" data-en="Profile <em><span class=&quot;amp&quot;>&amp;</span> Background</em>">Profil <em><span class="amp">&amp;</span> Latar Belakang</em></h2>
       <div class="section-rule"></div>
 
       <div class="profile" style="margin-top:44px;">
